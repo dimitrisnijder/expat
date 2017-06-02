@@ -6,6 +6,7 @@ module Expat
 
     def index
       @translations = append_missing_translations @locale, @translations
+      @locales = list_locales
     end
 
     def edit

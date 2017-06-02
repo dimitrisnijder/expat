@@ -2,13 +2,29 @@
 <html>
 <head>
   <title>Expat</title>
+  <%= stylesheet_link_tag    "//fonts.googleapis.com/css?family=Work+Sans:300,400,600,700", media: "all" %>
   <%= stylesheet_link_tag    "expat/application", media: "all" %>
   <%= javascript_include_tag "expat/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="c-top-bar">
+    <div class="c-top-bar__row">
+      <h1 class="c-top-bar__title">
+        expat
+      </h1>
+      <div class="c-top-bar__spacer"></div>
+      <nav class="c-navigation">
+        <% @locales.each do |locale| %>
+          <%= link_to locale.upcase, locale_translations_path(locale), 
+              class: 'c-navigation__link' %>
+        <% end %>
+      </nav>
+    </div>
+  </div>
+
+  <%= yield %>
 
 </body>
 </html>

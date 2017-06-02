@@ -1,0 +1,24 @@
+body {
+	font-family: $font-stack;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid #ccc;
+}
+
+.translation_missing {
+	background: map-get($colors, assertive);
+	color: map-get($colors, light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-stack-alt;
+}

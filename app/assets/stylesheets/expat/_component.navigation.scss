@@ -1,0 +1,31 @@
+.c-navigation {
+	margin: 0;
+    padding: 0;
+    height: 64px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.c-navigation__link {
+	display: block;
+    color: map-get($colors, light);
+    line-height: 64px;
+    padding: 0 24px;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
+}

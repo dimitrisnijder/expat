@@ -23,4 +23,16 @@
     text-align: center;
     line-height: 36px;
     vertical-align: middle;
+
+    &:hover {
+        border-bottom: none;
+    }
+}
+
+.o-button--assertive {
+    background-color: map-get($colors, assertive);
+
+    &:hover {
+        background-color: darken(map-get($colors, assertive), 10%);
+    }
 }

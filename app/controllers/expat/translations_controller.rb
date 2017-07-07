@@ -3,13 +3,14 @@ require_dependency 'expat/application_controller'
 module Expat
   class TranslationsController < ApplicationController
     before_action :load_translations
+    before_action :load_locales
 
     def index
       @translations = append_missing_translations @locale, @translations
-      @locales = list_locales
     end
 
     def edit
+      @locales = list_locales
       @translation = @translations[params[:id]]
     end
 
@@ -45,6 +46,10 @@ module Expat
       path = "#{Rails.root}/config/locales/#{locale}.yml"
       yml = YAML.load_file path
       iterate yml[locale], ''
+    end
+
+    def load_locales
+      @locales = list_locales
     end
 
     def append_missing_translations current, current_translations

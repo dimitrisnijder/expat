@@ -18,7 +18,8 @@
       <nav class="c-navigation">
         <% @locales.each do |locale| %>
           <%= link_to locale.upcase, locale_translations_path(locale), 
-              class: 'c-navigation__link' %>
+              class: "c-navigation__link #{'c-navigation__link--active' if 
+                  current_page?(locale_translations_path(locale))}" %>
         <% end %>
       </nav>
     </div>

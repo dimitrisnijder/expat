@@ -3,6 +3,7 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: map-get($colors, dark);
 }
 
 table {
@@ -17,8 +18,21 @@ td {
 .translation_missing {
 	background: map-get($colors, assertive);
 	color: map-get($colors, light);
+	display: inline-block;
+	padding: 3px 5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-stack-alt;
+}
+
+a {
+	color: map-get($colors, positive);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom .1s ease-in-out;
+
+	&:hover { 
+		border-bottom: 1px solid map-get($colors, positive);
+	}
 }
